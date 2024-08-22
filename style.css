@@ -19,16 +19,39 @@ section {
   padding: 10%;
 }
 
+input, textarea {
+  border: none;
+  outline: none;
+}
+
 button {
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   outline: none;
+  margin-top: 30px;
+  background: #ffffff;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 12px;
+  color: black;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b8b8b8;
 }
 
 a {
   text-decoration: none;
+}
+
+.lh1 {
+  font-family: 'Gamilia Demo';
+  letter-spacing: 3px;
+  font-size: 40px;
 }
 
 .header {
@@ -82,12 +105,17 @@ a {
 }
 
 .list {
-  width: 30vh;
-  padding-top: 50px;
+  width: 40vh;
   display: flex;
   justify-content: center;
   text-align: left;
   flex-direction: column;
+  height: 300px;
+  /* overflow-y: auto; */
+  /* overflow-x: hidden; */
+  scrollbar-color: white transparent;
+  scrollbar-width: thin;
+  position: relative;
 }
 
 .list a {
@@ -116,13 +144,15 @@ a {
   color: black;
   cursor: pointer;
   z-index: 1000;
-  position: absolute;
+  position: fixed;
   border: none;
   outline: none;
   transition-duration: 1s;
+  margin-top: 0;
 }
 
 .CloseSideBar {
+  margin-top: 0;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -147,9 +177,7 @@ a {
 }
 
 .hero h1 {
-  font-family: "Gamilia Demo";
   font-size: 70px;
-  letter-spacing: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,20 +189,77 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
   gap: 20px;
 }
 
-.hero .btn button {
-  background: #ffffff;
-  padding: 10px 25px;
-  font-size: 16px;
-  border-radius: 12px;
-  color: black;
-  transition-duration: 200ms;
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .main h1 {
+  font-size: 40px;
+}
+
+.contact a {
+  font-size: 20px;
+  margin-top: 50px;
+  text-decoration: underline;
+}
+
+.form {
+  height: 500px;
+  width: 40%;
+  background: rgb(54, 54, 54);
+  position: fixed;
+  top: 50px;
+  left: 30%;
+  border-radius: 40px;
+  top: 200%;
+}
+
+.head {
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+}
+
+.head * {
+  font-size: 20px;
+}
+
+.head img {
   cursor: pointer;
 }
 
-.hero .btn button:hover {
-  background: #b8b8b8;
+.form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+  gap: 10px;
+}
+
+.form form input {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  background: rgb(27, 27, 27);
+}
+
+.form form textarea {
+  width: 100%;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  resize: none;
+  border-radius: 15px;
+  background: rgb(27, 27, 27);
 }
