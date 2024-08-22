@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="title"></div>
+      <nav class="nav">
+        <a href="">Home</a>
+        <a href="">About Me</a>
+        <a href="">Portfolio</a>
+      </nav>
+    </header>
+
+    <button type="button" class="OpenSideBar" onclick="OpenSideBar()">
+      <img src="./Data/Images/Menu.svg" alt="" />
+    </button>
+
+    <section class="hero" id="hero">
+      <div class="circle">
+        <h3>Navigation</h3>
+        <div class="list">
+          <a href="">Home</a>
+          <a href="">Awards</a>
+          <a href="">Projects</a>
+          <a href="">Nothing</a>
+        </div>
+        <button type="button" class="CloseSideBar SideHide" onclick="CloseSideBar()">
+          <img src="./Data/Images/Close.svg" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
