@@ -14,6 +14,23 @@ body {
   scrollbar-width: thin;
 }
 
+.bodyb {
+  opacity: 0%;
+  transition-duration: 1s;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background: black;
+  pointer-events: none;
+  top: 0;
+  z-index: 1000;
+}
+
+.actb {
+  opacity: 90%;
+  pointer-events: all;
+}
+
 section {
   height: 100vh;
   padding: 10%;
@@ -98,6 +115,8 @@ a {
   justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
+  z-index: 20;
+  opacity: 0;
 }
 
 .circle h3 {
@@ -132,6 +151,7 @@ a {
   right: 0;
   height: 100vh;
   width: 70vh;
+  opacity: 1;
 }
 
 .OpenSideBar {
@@ -143,7 +163,7 @@ a {
   right: 5vh;
   color: black;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 100;
   position: fixed;
   border: none;
   outline: none;
@@ -161,7 +181,7 @@ a {
   right: 5vh;
   color: black;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 100;
   position: absolute;
   border: none;
   outline: none;
@@ -170,6 +190,7 @@ a {
 
 .SideHide {
   right: 5000px;
+  opacity: 0;
 }
 
 .hero {
@@ -206,6 +227,7 @@ a {
   font-size: 20px;
   margin-top: 50px;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .form {
@@ -217,6 +239,13 @@ a {
   left: 30%;
   border-radius: 40px;
   top: 200%;
+  transition-duration: 1s;
+  z-index: 1000;
+}
+
+.openForm {
+  top: 50px;
+  opacity: 100%;
 }
 
 .head {
@@ -262,4 +291,12 @@ a {
   resize: none;
   border-radius: 15px;
   background: rgb(27, 27, 27);
+}
+
+.MenuBtn {
+  position: fixed;
+  bottom: 5vh;
+  left: 5vh;
+  height: 50px;
+  width: 50px;
 }
