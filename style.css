@@ -7,14 +7,22 @@
 }
 
 body {
-    scroll-behavior: smooth;
-    background: black;
-    overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: black;
+  overflow-x: hidden;
 }
 
 section {
   height: 100vh;
   padding: 10%;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
 }
 
 a {
@@ -31,22 +39,23 @@ a {
   align-items: center;
   justify-content: space-between;
   background: black;
+  display: none;
 }
 
 .header .nav {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
   gap: 35px;
 }
 
 .header .nav a {
-    font-weight: 500;
-    transition-duration: 300ms;
+  font-weight: 500;
+  transition-duration: 300ms;
 }
 
 .header .nav a:hover {
-    color: rgb(196, 196, 196);
+  color: rgb(196, 196, 196);
 }
 
 .circle {
@@ -64,6 +73,10 @@ a {
   justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
+}
+
+.circle h3 {
+  color: rgb(160, 160, 160);
 }
 
 .list {
@@ -126,3 +139,33 @@ a {
 .SideHide {
   right: 350%;
 }
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: "Gamilia Demo";
+  font-size: 70px;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.hero .btn button {
+  background: rgb(56, 56, 255);
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
