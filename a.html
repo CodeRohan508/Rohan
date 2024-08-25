@@ -1,59 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #333;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List with Centered Followers</title>
+    <style>
+        /* Style for the project list container */
+        .projectList {
+            margin: 50px;
+        }
 
-    .button {
-      padding: 15px 30px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 18px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      transition: color 0.4s ease;
-    }
+        /* Style for each project item */
+        .item {
+            position: relative; /* Needed to position the follower absolutely within the item */
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            cursor: pointer; /* Change cursor to pointer when hovering over items */
+        }
 
-    .button::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 300%;
-      height: 300%;
-      background: rgba(255, 255, 255, 0.2);
-      transition: width 0.4s ease, height 0.4s ease, left 0.4s ease, top 0.4s ease;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .button:hover::before {
-      width: 0;
-      height: 0;
-      left: 50%;
-      top: 50%;
-    }
-
-    .button:hover {
-      color: #fff;
-    }
-  </style>
+        /* Style for the follower */
+        .follower {
+            width: 100px;
+            height: 50px;
+            background-color: orange;
+            position: absolute;
+            display: none; /* Hidden by default */
+            pointer-events: none; /* Makes sure the follower does not block mouse events */
+            transition: transform 0.1s ease; /* Smooth transition effect */
+        }
+    </style>
 </head>
 <body>
-  <button class="button">Hover Me</button>
+    <!-- Project list container -->
+    <div class="projectList">
+        <!-- Project item with follower -->
+        <div class="item">
+            <h2>COFFEE WEBSITE</h2>
+            <h3>2023</h3>
+            <div class="follower">Details about COFFEE WEBSITE</div> <!-- Follower div -->
+        </div>
+        <!-- Project item with follower -->
+        <div class="item">
+            <h2>LEAF</h2>
+            <h3>2024</h3>
+            <div class="follower">Details about LEAF</div> <!-- Follower div -->
+        </div>
+        <!-- Project item with follower -->
+        <div class="item">
+            <h2>AAA</h2>
+            <h3>2022</h3>
+            <div class="follower">Details about AAA</div> <!-- Follower div -->
+        </div>
+    </div>
+
+    <script>
+        // Function to initialize hover effects for each item
+        function initHoverEffect() {
+            // Get all items in the project list
+            const items = document.querySelectorAll('.item');
+
+            // Iterate over each item to add hover effects
+            items.forEach(item => {
+                const follower = item.querySelector('.follower');
+
+                // Show the follower div when mouse enters the item
+                item.addEventListener('mouseenter', () => {
+                    follower.style.display = 'block';
+                });
+
+                // Move the follower div with the mouse
+                item.addEventListener('mousemove', (event) => {
+                    const rect = item.getBoundingClientRect();
+                    const mouseX = event.clientX - rect.left;
+                    const mouseY = event.clientY - rect.top;
+
+                    // Calculate the position to center the follower on the mouse
+                    const followerWidth = follower.offsetWidth;
+                    const followerHeight = follower.offsetHeight;
+
+                    const followerX = mouseX - (followerWidth / 2);
+                    const followerY = mouseY - (followerHeight / 2);
+
+                    // Update the follower position
+                    follower.style.transform = `translate(${followerX}px, ${followerY}px)`;
+                });
+
+                // Hide the follower div when mouse leaves the item
+                item.addEventListener('mouseleave', () => {
+                    follower.style.display = 'none';
+                });
+            });
+        }
+
+        // Initialize the hover effect on page load
+        document.addEventListener('DOMContentLoaded', initHoverEffect);
+    </script>
 </body>
 </html>

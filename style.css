@@ -229,6 +229,67 @@ a {
   font-size: 40px;
 }
 
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectHead h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.projectHead p {
+  font-size: 15px;
+  text-align: center;
+}
+
+.projectList {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.projectList .item {
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3% 5%;
+  margin: 20px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 40%;
+  transition: all 0.6s;
+  position: relative;
+}
+
+.follower {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(39, 39, 39);
+  position: absolute;
+  display: none; /* Hidden by default */
+  pointer-events: none; /* Makes sure the follower does not block mouse events */
+  transition: transform 0.1s ease; /* Smooth transition effect */
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.projectList .item:hover {
+  scale: 1.1;
+  padding: 3% 8%;
+  opacity: 1;
+}
+
 .contact a {
   font-size: 20px;
   margin-top: 50px;
