@@ -206,6 +206,12 @@ a {
   padding-top: 60px;
 }
 
+.hero h4 {
+  margin-top: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 .hero .btn {
   display: flex;
   justify-content: center;
