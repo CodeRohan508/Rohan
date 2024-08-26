@@ -8,6 +8,7 @@
 }
 
 body {
+  scroll-snap-type: mandatory;
   scroll-behavior: smooth;
   background: black;
   overflow-x: hidden;
@@ -36,7 +37,8 @@ section {
   padding: 10%;
 }
 
-input, textarea {
+input,
+textarea {
   border: none;
   outline: none;
 }
@@ -61,12 +63,70 @@ button:hover {
   background: #b8b8b8;
 }
 
+button[type="button"] {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff; /* Initial background color */
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden; /* Hide the overflow for the sliding effect */
+  position: relative; /* Position relative for the pseudo-elements */
+  z-index: 1; /* Ensure text is above pseudo-elements */
+  display: inline-block; /* Keep text inline without shifting */
+  transition: color 0.4s ease-out; /* Transition for text color if needed */
+}
+
+/* Pseudo-element for the hover background change */
+button[type="button"]::before,
+button[type="button"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #c0c0c0; /* Color when hovering */
+  transition: transform 0.4s ease-out;
+  z-index: -1; /* Place behind the button[type="button"] text */
+}
+
+/* Start with the pseudo-element hidden */
+button[type="button"]::before {
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+/* Start with the pseudo-element covering the button[type="button"] */
+button[type="button"]::after {
+  transform: scaleX(0);
+  transform-origin: right; /* Change transform origin to right */
+}
+
+/* On hover, show the before pseudo-element (bottom to top effect) */
+button[type="button"]:hover::before {
+  transform: scaleY(1);
+}
+
+/* On hover out, cover the button[type="button"] from right to left */
+button[type="button"]:hover::after {
+  transform: scaleX(1);
+  transition-delay: 0.4s; /* Delay to wait for the hover effect to complete */
+  transform-origin: right; /* Ensure origin stays right for reverse effect */
+}
+
 a {
   text-decoration: none;
 }
 
 .lh1 {
-  font-family: 'Gamilia Demo';
+  font-family: "Gamilia Demo";
   letter-spacing: 3px;
   font-size: 40px;
 }
@@ -274,14 +334,30 @@ a {
 
 .follower {
   width: 300px;
-  height: 300px;
-  background-color: rgb(39, 39, 39);
+  height: max-content;
+  background-color: rgb(53, 53, 53);
   position: absolute;
   display: none; /* Hidden by default */
+  scale: 0.1;
   pointer-events: none; /* Makes sure the follower does not block mouse events */
-  transition: transform 0.1s ease; /* Smooth transition effect */
+  transition: scale 5s ease;
   border-radius: 15px;
   padding: 20px;
+}
+
+.follower img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(58, 58, 58), -0px -0px 10px rgb(58, 58, 58);
+}
+
+.follower h2 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.follower p {
+  font-size: 12px;
 }
 
 .projectList .item:hover {

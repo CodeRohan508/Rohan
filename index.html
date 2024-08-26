@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Muhammad Nurujjaman</title>
+    <!-- Load ScrollReveal script before your custom scripts -->
   </head>
   <body>
     <div class="bodyb"></div>
@@ -19,11 +20,11 @@
       </nav>
     </header>
 
-    <button type="button" class="OpenSideBar" onclick="OpenSideBar()">
+    <button class="OpenSideBar" onclick="OpenSideBar()">
       <img src="./Data/Images/Menu.svg" alt="" />
     </button>
 
-    <button type="button" class="MenuBtn">
+    <button class="MenuBtn">
       <img src="./Data/Images/threeDot.svg" alt="">
     </button>
 
@@ -36,18 +37,14 @@
         <a href="">Projects</a>
         <a href="">Reviews</a>
       </div>
-      <button
-        type="button"
-        class="CloseSideBar SideHide"
-        onclick="CloseSideBar()"
-      >
+      <button class="CloseSideBar SideHide" onclick="CloseSideBar()">
         <img src="./Data/Images/Close.svg" alt="" />
       </button>
     </div>
 
     <section class="hero" id="hero">
       <h1>Hey There! My Name is,</h1>
-      <h2>Md. Nurujjaman Rohan.</p>
+      <h2>Md. Nurujjaman Rohan.</h2> <!-- Corrected closing tag -->
       <h4>I am a Programmer and Graphic Designer</h4>
       <div class="btn">
         <button type="button">Get Started</button>
@@ -72,26 +69,27 @@
     <section class="projects">
       <div class="projectHead">
         <h1>Have a look on my Projects!</h1>
-        <p>Let's have a look on some projects I have did recently</p>
+        <p>Let's have a look on some projects I have done recently</p>
       </div>
       <div class="projectList">
-        <!-- Project item with follower -->
         <div class="item">
             <h2>COFFEE WEBSITE</h2>
             <h3>2023</h3>
-            <div class="follower">Details about COFFEE WEBSITE</div> <!-- Follower div -->
+            <div class="follower">
+              <img src="https://imgs.search.brave.com/x4b0ZUACVcaRQE2NZ3CQU4QV5GSurqVhmUzT2pM5uNE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/NzQ5NzE2MC9waG90/by9jb2ZmZWUtY3Vw/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1sb202dTlPbVhQ/UU9XTHNld0xrTmsz/NU1Sb2xEWThYbDMx/RFZ3LVZGd1A4PQ" alt="">
+              <h2>Coffee Website</h2>
+              <p>Click to check it!</p>
+            </div>
         </div>
-        <!-- Project item with follower -->
         <div class="item">
             <h2>LEAF</h2>
             <h3>2024</h3>
-            <div class="follower">Details about LEAF</div> <!-- Follower div -->
+            <div class="follower">Details about LEAF</div>
         </div>
-        <!-- Project item with follower -->
         <div class="item">
             <h2>AAA</h2>
             <h3>2022</h3>
-            <div class="follower">Details about AAA</div> <!-- Follower div -->
+            <div class="follower">Details about AAA</div>
         </div>
       </div>
     </section>
@@ -114,6 +112,38 @@
         </form>
     </div>
 
+    <!-- Your custom script should be loaded after the ScrollReveal script -->
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        // Initialize ScrollReveal after the library is loaded
+        ScrollReveal().reveal('#hero h1', {
+          duration: 1000,
+          origin: 'top',
+          distance: '50px',
+          delay: 200
+        });
+
+        ScrollReveal().reveal('#hero h2', {
+          duration: 1000,
+          origin: 'right',
+          distance: '50px',
+          delay: 400
+        });
+
+        ScrollReveal().reveal('#hero h4', {
+          duration: 1000,
+          origin: 'left',
+          distance: '50px',
+          delay: 600
+        });
+
+        ScrollReveal().reveal("#hero .btn", {
+          duration: 1000,
+          origin: 'bottom',
+          distance: '50px',
+          delay: 600
+        })
+    </script>
   </body>
 </html>
