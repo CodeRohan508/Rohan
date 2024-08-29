@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body class="flex ">
-    
+
+<body class="bg-black text-white scroll-smooth">
+    <button id="OpenSideBarBtn" class="flex justify-center items-center z-10 h-16 w-16 fixed top-[5vh] right-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
+        <img src="./Data/Images/ThreeBar.svg" alt="">
+    </button>
+
+    <button id="CloseSideBarBtn"
+        class="z-20 flex justify-center items-center h-16 w-16 fixed top-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black right-[500vh]">
+        <img src="./Data/Images/Cross.svg" alt="">
+    </button>
+
+    <div id="sideBar" class="z-10 h-screen w-[95vh] fixed bg-neutral-700 top-0 flex items-center justify-center flex-col rounded-[100%] duration-1000 right-[-200vh] transition-all pl-16">
+        <h2 class="w-80 uppercase text-sm font-extrabold text-neutral-400 pb-4">Navigation</h2>
+        <div class="flex justify-start flex-col w-72">
+            <a href="" class="navLink btn">Home</a>
+            <a href="" class="navLink btn">Portfolio</a>
+            <a href="" class="navLink btn">About Me</a>
+            <a href="" class="navLink btn">Contact</a>
+            <a href="" class="navLink btn">Reviews</a>
+        </div>
+    </div>
+
+    <section id="hero" class="text-center items-center justify-end flex flex-col">
+        <h1 class="bg-gradient-to-tr from-yellow-300 to-yellow-600 text-transparent bg-clip-text font-black text-4xl">
+            Nurujjaman Rohan</h1>
+        <h2>
+            <span class="bg-gradient-to-tr from-blue-400 to-blue-800 text-transparent bg-clip-text font-black">Web
+                Developer</span> and
+            <span
+                class="bg-gradient-to-tr from-green-300 to-green-600 text-transparent bg-clip-text font-black">Programmer</span>
+        </h2>
+    </section>
+
+    <section id="works" class="w-full">
+        <h2 class="uppercase font-bold text-md pb-5">Recent Projects</h2>
+        <div class="flex items-center justify-center flex-col w-full">
+            <div class="listItem">
+                <h2 class="font-semibold text-xl">Hello</h2>
+                <h3>2023</h3>
+            </div>
+            <div class="listItem">
+                <h2 class="font-semibold text-xl">Hello</h2>
+                <h3>2023</h3>
+            </div>
+            <div class="listItem">
+                <h2 class="font-semibold text-xl">Hello</h2>
+                <h3>2023</h3>
+            </div>
+        </div>
+        <div class="w-full text-right pr-10">
+            <a href="" class="text-right underline font-bold hover:text-slate-400 duration-500">See More</a>
+        </div>
+    </section>
+
+    <footer class="h-[350px] w-full bg-slate-900 rounded-t-[100px] p-16 px-60 flex justify-between items-start sm:flex-col lg:flex-row">
+        <div class="w-32">
+            <h3 class="uppercase font-extrabold text-xl text-neutral-400">About Me</h3>
+            <div class="footPara">
+                <a href="" class="footLink">Education</a>
+                <a href="" class="footLink">Experience</a>
+                <a href="" class="footLink">Profeciency</a>
+                <a href="" class="footLink">Skills</a>
+                <a href="" class="footLink">Projects</a>
+            </div>
+        </div>
+
+        <div class="w-32">
+            <h3 class="uppercase font-extrabold text-xl text-neutral-400">About Me</h3>
+            <div class="footPara">
+                <a href="" class="footLink">Education</a>
+                <a href="" class="footLink">Experience</a>
+                <a href="" class="footLink">Profeciency</a>
+            </div>
+        </div>
+
+        <div class="w-32">
+            <h3 class="uppercase font-extrabold text-xl text-neutral-400">Portfolio</h3>
+            <div class="footPara">
+                <a href="" class="footLink">Projects</a>
+                <a href="" class="footLink">Experience</a>
+                <a href="" class="footLink">Profeciency</a>
+                <a href="" class="footLink">Skills</a>
+                <a href="" class="footLink">Projects</a>
+            </div>
+        </div>
+
+        <div class="w-32">
+            <h3 class="uppercase font-extrabold text-xl text-neutral-400">About Me</h3>
+            <div class="footPara">
+                <a href="" class="footLink">Education</a>
+                <a href="" class="footLink">Experience</a>
+                <a href="" class="footLink">Profeciency</a>
+                <a href="" class="footLink">Skills</a>
+                <a href="" class="footLink">Projects</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
