@@ -33,6 +33,7 @@ document
   });
 
 let btns = document.querySelectorAll(".btn");
+let btnSpan = document.querySelectorAll(".btn span");
 
 btns.forEach((btn) => {
   btn.addEventListener("mousemove", (e) => {
@@ -40,9 +41,8 @@ btns.forEach((btn) => {
     let y = e.offsetY;
     let btnWidth = btn.clientWidth;
     let btnHeight = btn.clientHeight;
-    // Reduce the scaling factor for even less movement
-    let transX = (x - btnWidth / 2) * 0.05; // Adjust this value for less range
-    let transY = (y - btnHeight / 2) * 0.05; // Adjust this value for less range
+    let transX = (x - btnWidth / 2) * 0.3;
+    let transY = (y - btnHeight / 2) * 0.3;
     btn.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
   });
 

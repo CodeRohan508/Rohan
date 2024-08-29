@@ -9,6 +9,54 @@
 </head>
 
 <body class="bg-black text-white scroll-smooth">
+    <button id="toggleButton">
+        <svg id="icon" width="24" height="24" viewBox="0 0 24 24">
+          <line id="line1" x1="4" y1="6" x2="20" y2="6" stroke="black" stroke-width="2"/>
+          <line id="line2" x1="4" y1="18" x2="20" y2="18" stroke="black" stroke-width="2"/>
+        </svg>
+      </button>
+      
+
+      <script>
+        // Select the button and SVG elements
+const button = document.querySelector('#toggleButton');
+
+// Add a click event listener to the button
+button.addEventListener('click', () => {
+  // Toggle the 'active' class on the button
+  button.classList.toggle('active');
+});
+
+      </script>
+
+      <style>
+#toggleButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+}
+
+#icon line {
+  transition: transform 0.3s ease; /* Smooth transition for transform property */
+  transform-origin: 50% 50%; /* Center of the SVG element */
+}
+
+#toggleButton.active #line1 {
+  transform: rotate(45deg) translate(0, 6px); /* Adjust the translation to center the rotation */
+}
+
+#toggleButton.active #line2 {
+  transform: rotate(-45deg) translate(0, -6px); /* Adjust the translation to center the rotation */
+}
+
+      </style>
+
+
     <button id="OpenSideBarBtn" class="flex justify-center items-center z-10 h-16 w-16 fixed top-[5vh] right-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
         <img src="./Data/Images/ThreeBar.svg" alt="">
     </button>
@@ -20,7 +68,7 @@
 
     <div id="sideBar" class="z-10 h-screen w-[95vh] fixed bg-neutral-700 top-0 flex items-center justify-center flex-col rounded-[100%] duration-1000 right-[-200vh] transition-all pl-16">
         <h2 class="w-80 uppercase text-sm font-extrabold text-neutral-400 pb-4">Navigation</h2>
-        <div class="flex justify-start flex-col w-72">
+        <div class="flex justify-start flex-col w-72 gap">
             <a href="" class="navLink btn">Home</a>
             <a href="" class="navLink btn">Portfolio</a>
             <a href="" class="navLink btn">About Me</a>
