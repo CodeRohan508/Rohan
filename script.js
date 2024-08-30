@@ -1,42 +1,41 @@
-document
-  .getElementById("OpenSideBarBtn")
-  .addEventListener("click", function () {
-    const sideBar = document.getElementById("sideBar");
-    const CloseSideBarBtn = document.getElementById("CloseSideBarBtn");
-    const OpenSideBarBtn = document.getElementById("OpenSideBarBtn");
-    const blocker = document.getElementById("blocker")
+const sideBar = document.getElementById("sideBar");
+const CloseSideBarBtn = document.getElementById("CloseSideBarBtn");
+const OpenSideBarBtn = document.getElementById("OpenSideBarBtn");
+const blocker = document.getElementById("blocker");
 
-    sideBar.classList.add("right-[0px]");
-    sideBar.classList.add("rounded-none");
-    sideBar.classList.remove("right-[-200vh]");
-    sideBar.classList.remove("rounded-[100%]");
-    CloseSideBarBtn.classList.add("right-[5vh]");
-    CloseSideBarBtn.classList.remove("right-[500vh]");
-    OpenSideBarBtn.classList.add("right-[500vh]");
-    OpenSideBarBtn.classList.remove("right-[5vh]");
-    blocker.classList.remove("pointer-events-none")
-    blocker.classList.remove("opacity-0")
-    blocker.classList.add("pointer-events-auto")
-    blocker.classList.add("opacity-50")
-  });
+function OpenSideBar() {
+  sideBar.classList.add("right-[0px]");
+  sideBar.classList.add("rounded-none");
+  sideBar.classList.remove("right-[-200vh]");
+  sideBar.classList.remove("rounded-[100%]");
+  CloseSideBarBtn.classList.add("right-[5vh]");
+  CloseSideBarBtn.classList.remove("right-[500vh]");
+  OpenSideBarBtn.classList.add("right-[500vh]");
+  OpenSideBarBtn.classList.remove("right-[5vh]");
+  blocker.classList.remove("pointer-events-none");
+  blocker.classList.remove("opacity-0");
+  blocker.classList.add("pointer-events-auto");
+  blocker.classList.add("opacity-50");
+}
 
-document
-  .getElementById("CloseSideBarBtn")
-  .addEventListener("click", function () {
-    const sideBar = document.getElementById("sideBar");
-    const CloseSideBarBtn = document.getElementById("CloseSideBarBtn");
-    const OpenSideBarBtn = document.getElementById("OpenSideBarBtn");
+function CloseSideBar() {
+  sideBar.classList.remove("right-[0px]");
+  sideBar.classList.remove("rounded-none");
+  sideBar.classList.add("right-[-200vh]");
+  sideBar.classList.add("rounded-[100%]");
+  CloseSideBarBtn.classList.remove("right-[5vh]");
+  CloseSideBarBtn.classList.add("right-[500vh]");
+  OpenSideBarBtn.classList.remove("right-[500vh]");
+  OpenSideBarBtn.classList.add("right-[5vh]");
+  blocker.classList.add("pointer-events-none");
+  blocker.classList.add("opacity-0");
+  blocker.classList.remove("pointer-events-auto");
+  blocker.classList.remove("opacity-50");
+};
 
-    sideBar.classList.remove("right-[0px]");
-    sideBar.classList.remove("rounded-none");
-    sideBar.classList.add("right-[-200vh]");
-    sideBar.classList.add("rounded-[100%]");
-    CloseSideBarBtn.classList.remove("right-[5vh]");
-    CloseSideBarBtn.classList.add("right-[500vh]");
-    OpenSideBarBtn.classList.remove("right-[500vh]");
-    OpenSideBarBtn.classList.add("right-[5vh]");
-  });
-
+OpenSideBarBtn.addEventListener("click", OpenSideBar);
+CloseSideBarBtn.addEventListener("click", CloseSideBar);
+blocker.addEventListener("click", CloseSideBar);
 
 let btns = document.querySelectorAll(".btn");
 let btnSpan = document.querySelectorAll(".btn span");

@@ -8,10 +8,14 @@
     <title>Document</title>
 </head>
 
-<body class="bg-black text-white scroll-smooth">    
+<body class="bg-black text-white scroll-smooth">
+    <a href="#hero" class="z-10 flex justify-center items-center h-16 w-16 fixed left-[5vh] bottom-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
+        <img src="./Data/Images/UpArrow.svg" alt="">
+    </a>
+
     <div id="blocker" class="h-screen w-full bg-black z-[5] opacity-0 fixed top-0 pointer-events-none transition-all duration-1000"></div>
 
-    <button id="OpenSideBarBtn" class="flex justify-center items-center z-10 h-16 w-16 fixed top-[5vh] right-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
+    <button id="OpenSideBarBtn" class="z-20 flex justify-center items-center h-16 w-16 fixed top-[5vh] right-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
         <img src="./Data/Images/ThreeBar.svg" alt="">
     </button>
 
@@ -63,7 +67,7 @@
         </div>
     </section>
 
-    <footer class="h-[350px] w-full bg-slate-900 rounded-t-[100px] p-16 px-60 flex justify-between items-start sm:flex-col lg:flex-row">
+    <footer class="h-[350px] w-full border-t-2 border-white rounded-t-[100px] p-16 px-60 flex justify-between items-start sm:flex-col lg:flex-row">
         <div class="w-32">
             <h3 class="uppercase font-extrabold text-xl text-neutral-400">About Me</h3>
             <div class="footPara">
