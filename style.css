@@ -33,3 +33,27 @@ section {
 .listItem {
   @apply flex items-center justify-between w-full border-y-2 border-white px-[5%] py-[2%] rounded-xl opacity-40 hover:opacity-100 hover:scale-105 duration-500 cursor-pointer my-4;
 }
+
+#toggleButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+#icon line {
+  transition: transform 0.3s ease; /* Smooth transition for transform property */
+  transform-origin: 50% 50%; /* Center of the SVG element */
+}
+
+#toggleButton.active #line1 {
+  transform: rotate(45deg) translate(0, 4px); /* Rotate and slightly translate to form the top of the 'X' */
+}
+
+#toggleButton.active #line2 {
+  transform: rotate(-45deg) translate(0, -4px); /* Rotate and slightly translate to form the bottom of the 'X' */
+}

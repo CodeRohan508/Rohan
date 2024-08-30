@@ -4,6 +4,7 @@ document
     const sideBar = document.getElementById("sideBar");
     const CloseSideBarBtn = document.getElementById("CloseSideBarBtn");
     const OpenSideBarBtn = document.getElementById("OpenSideBarBtn");
+    const blocker = document.getElementById("blocker")
 
     sideBar.classList.add("right-[0px]");
     sideBar.classList.add("rounded-none");
@@ -13,6 +14,10 @@ document
     CloseSideBarBtn.classList.remove("right-[500vh]");
     OpenSideBarBtn.classList.add("right-[500vh]");
     OpenSideBarBtn.classList.remove("right-[5vh]");
+    blocker.classList.remove("pointer-events-none")
+    blocker.classList.remove("opacity-0")
+    blocker.classList.add("pointer-events-auto")
+    blocker.classList.add("opacity-50")
   });
 
 document
@@ -31,6 +36,7 @@ document
     OpenSideBarBtn.classList.remove("right-[500vh]");
     OpenSideBarBtn.classList.add("right-[5vh]");
   });
+
 
 let btns = document.querySelectorAll(".btn");
 let btnSpan = document.querySelectorAll(".btn span");
