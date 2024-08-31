@@ -55,3 +55,27 @@ btns.forEach((btn) => {
     btn.style.transform = "translateX(0) translateY(0)";
   });
 });
+
+const customize =  document.getElementById("customize")
+
+function openCustomize() {
+  customize.classList.toggle("right-3")
+  customize.classList.toggle("right-[-50%]")
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fontSelect = document.getElementById("fontSelect");
+  const themeSelect = document.getElementById("themeSelect");
+
+  fontSelect.addEventListener("change", function () {
+      const selectedFont = this.value;
+      document.body.classList.remove("font-default", "font-modern", "font-simple", "font-easy", "font-newspaper");
+      document.body.classList.add(`font-${selectedFont}`);
+  });
+
+  themeSelect.addEventListener("change", function () {
+      const selectedTheme = this.value;
+      document.body.classList.remove("theme-default", "theme-light", "theme-dark", "theme-neon", "theme-glitch");
+      document.body.classList.add(`theme-${selectedTheme}`);
+  });
+});

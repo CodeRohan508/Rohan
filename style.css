@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  font-family: "Inter";
+  font-family: "Fira Code";
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -15,16 +15,28 @@ section {
   padding: 5%;
 }
 
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
 .navLink {
-  @apply flex items-center text-4xl uppercase font-bold duration-75 h-11 w-max;
-}
-
-.footLink {
-  @apply hover:pl-3 duration-500 hover:font-semibold;
-}
-
-.footPara {
-  @apply flex flex-col text-left pl-5 pb-5;
+  @apply flex items-center text-4xl uppercase font-bold duration-75 h-11 w-max text-white;
 }
 
 .btn {
@@ -32,7 +44,7 @@ section {
 }
 
 .listItem {
-  @apply flex items-center justify-between w-full border-y-2 border-white px-[5%] py-[2%] rounded-xl opacity-40 hover:opacity-100 hover:scale-105 duration-500 cursor-pointer my-4;
+  @apply flex items-center justify-between w-full border-y-2 border-black px-[5%] py-[2%] rounded-xl opacity-40 hover:opacity-100 hover:scale-105 duration-500 cursor-pointer my-4 font-sf;
 }
 
 #toggleButton {
@@ -57,4 +69,70 @@ section {
 
 #toggleButton.active #line2 {
   transform: rotate(-45deg) translate(0, -4px); /* Rotate and slightly translate to form the bottom of the 'X' */
+}
+
+#customize {
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px); /* For Safari support */
+  border-radius: 10px;
+  overflow: hidden; /* Clip background to rounded border */
+}
+
+
+/* Font Styles */
+
+body {
+  font-family: var(--fonts);
+  background: var(--bg-color);
+  color: var(--text);
+}
+
+.font-default {
+  font-family: "Fira Code", sans-serif;
+}
+
+.font-modern {
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+.font-simple {
+  font-family: 'Georgia', serif;
+}
+
+.font-easy {
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.font-newspaper {
+  font-family: 'Times New Roman', serif;
+}
+
+/* Theme Styles */
+.theme-default {
+  --bg-color: rgb(230, 230, 230);
+  --text: black
+}
+
+.theme-light {
+  --bg-color: white;
+  --text: black
+}
+
+.theme-dark {
+  --bg-color: rgb(0, 0, 0);
+  --text: rgb(255, 255, 255);
+}
+
+.theme-neon {
+  --bg-color: white;
+  --text: black
+}
+
+.theme-glitch {
+  --bg-color: rgb(37, 37, 37);
+  --text: #ff6f61;
+  text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff6f61;
 }
