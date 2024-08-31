@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sf: ["SF Pro Display"]
+        sf: "SF Pro Display"
       }
     },
   },

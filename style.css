@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 * {
-  font-family: "Fira Code";
+  font-family: var(--fonts);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+:root {
+  --fonts: "Fira Code"
 }
 
 section {
@@ -44,7 +48,11 @@ section {
 }
 
 .listItem {
-  @apply flex items-center justify-between w-full border-y-2 border-black px-[5%] py-[2%] rounded-xl opacity-40 hover:opacity-100 hover:scale-105 duration-500 cursor-pointer my-4 font-sf;
+  @apply flex items-center justify-between w-full border-y-2 border-[var(--text)] px-[5%] py-[2%] rounded-xl opacity-40 hover:opacity-100 hover:scale-105 duration-500 cursor-pointer my-4 font-sf;
+}
+
+.contextItem {
+  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 font-sf w-full text-left
 }
 
 #toggleButton {
@@ -85,29 +93,28 @@ section {
 /* Font Styles */
 
 body {
-  font-family: var(--fonts);
   background: var(--bg-color);
   color: var(--text);
 }
 
 .font-default {
-  font-family: "Fira Code", sans-serif;
+  --fonts: "Fira Code", sans-serif;
 }
 
 .font-modern {
-  font-family: 'SF Pro Display', sans-serif;
+  --fonts: 'SF Pro Display', sans-serif;
 }
 
 .font-simple {
-  font-family: 'Georgia', serif;
+  --fonts: 'Inter', serif;
 }
 
 .font-easy {
-  font-family: 'Comic Sans MS', sans-serif;
+  --fonts: 'Comic Sans MS', sans-serif;
 }
 
 .font-newspaper {
-  font-family: 'Times New Roman', serif;
+  --fonts: 'Times New Roman';
 }
 
 /* Theme Styles */
@@ -127,8 +134,9 @@ body {
 }
 
 .theme-neon {
-  --bg-color: white;
-  --text: black
+  --bg-color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px #4d9cf7, 0 0 10px #61ff7b;
+  --text: white
 }
 
 .theme-glitch {

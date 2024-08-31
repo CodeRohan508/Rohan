@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false;">
 
 <head>
     <meta charset="UTF-8">
@@ -9,11 +9,27 @@
 </head>
 
 <body class="scroll-smooth">
-    <div id="blocker" class="h-screen w-full z-[5] opacity-0 fixed top-0 pointer-events-none transition-all duration-1000"></div>
+    <div id="contextMenu" class="z-50 hidden absolute bg-slate-200 shadow-md shadow-slate-400 rounded-lg py-2 w-48">
+        <button href="#" class="contextItem">Back</button>
+        <button href="#" class="contextItem">Reload</button>
+        <button href="#" class="contextItem">Close Window</button>
+        <button href="#" class="contextItem">Close Current Tab</button>
+        <div class="border-t border-slate-400 my-2"></div>
+        <button href="" class="contextItem">Portfolio</button>
+        <button href="" class="contextItem">About Me</button>
+        <button href="" class="contextItem">Hire Me</button>
+        <button href="" class="contextItem">Blogs</button>
+        <button href="" class="contextItem">Top Projects</button>
+        <div class="border-t border-slate-400 my-2"></div>
+        <button href="" class="contextItem">Leave a Review</button>
+        <button href="" class="contextItem">Ask Something</button>
+    </div>
+
+    <div id="blocker" class="bg-black h-screen w-full z-[5] opacity-0 fixed top-0 pointer-events-none transition-all duration-1000"></div>
 
     <div id="customize" class="fixed right-[-50%] bottom-16 h-[350px] w-52 p-5 rounded-xl duration-500 transition-all">
         <h3>Fonts</h3>
-        <select name="font" id="fontSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none">
+        <select name="font" id="fontSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none text-black">
             <option value="default">Default</option>
             <option value="modern">Modern</option>
             <option value="simple">Simple</option>
@@ -22,23 +38,23 @@
         </select>
         
         <h3 class="mt-5">Theme</h3>
-        <select name="theme" id="themeSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none">
+        <select name="theme" id="themeSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none text-black">
             <option value="default">Default</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
             <option value="neon">Neon</option>
             <option value="glitch">Glitch</option>
-        </select>
-                
+        </select>      
     </div>
-    <button onclick="openCustomize()" class="font-sf border-2 border-black px-2 rounded-xl fixed bottom-3 right-3 bg-[var(--bg-color)]">Customize</button>
+
+    <button onclick="openCustomize()" class="font-sf border-2 border-[var(--text)] px-2 rounded-xl fixed bottom-3 right-3 bg-[var(--bg-color)]">Customize</button>
 
     <button id="OpenSideBarBtn" class="z-20 flex justify-center items-center border-2 border-black  h-16 w-16 fixed top-[5vh] right-[5vh] bg-[var(--bg-color)] rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
         <img src="./Data/Images/ThreeBar.svg" alt="">
     </button>
 
     <button id="CloseSideBarBtn"
-        class="z-20 flex justify-center items-center h-16 w-16 fixed top-[5vh] border-2 border-black  bg-[var(--bg-color)] rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black right-[500vh]">
+        class="z-20 flex justify-center items-center h-16 w-16 fixed top-[5vh] bg-white border-2 border-black  bg-[var(--bg-color)] rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black right-[500vh]">
         <img src="./Data/Images/Cross.svg" alt="">
     </button>
 
@@ -54,7 +70,7 @@
     </div>
 
     <section id="hero" class="text-center items-center justify-center flex flex-col">
-        <h1 class="text-black font-black text-4xl">Nurujjaman Rohan</h1>
+        <h1 class="font-black text-4xl">Nurujjaman Rohan</h1>
         <h2>
             <span class="bg-gradient-to-tr from-blue-400 to-blue-800 text-transparent bg-clip-text font-black">Web
                 Developer</span> and
