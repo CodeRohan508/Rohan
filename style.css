@@ -52,7 +52,7 @@ section {
 }
 
 .contextItem {
-  @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-300 font-sf w-full text-left
+  @apply block px-4 text-sm text-gray-100 bg-transparent font-sf w-[96%] text-left m-[2%] hover:bg-sky-800 rounded-md font-semibold
 }
 
 #toggleButton {
@@ -110,7 +110,7 @@ body {
 }
 
 .font-easy {
-  --fonts: 'Comic Sans MS', sans-serif;
+  --fonts: 'Comic Neue', sans-serif;
 }
 
 .font-newspaper {

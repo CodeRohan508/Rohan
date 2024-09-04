@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="//fdn.fontcdn.ir"><link rel="preconnect" href="//v1.fontapi.ir"><link href="https://v1.fontapi.ir/css/SFProDisplay" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body class="scroll-smooth">
-    <div id="contextMenu" class="z-50 hidden absolute bg-slate-200 shadow-md shadow-slate-400 rounded-lg py-2 w-48">
+    <div id="contextMenu" class="z-50 hidden absolute bg-neutral-800 shadow-md rounded-lg py-2 w-48">
         <button href="#" class="contextItem">Back</button>
         <button href="#" class="contextItem">Reload</button>
         <button href="#" class="contextItem">Close Window</button>
@@ -49,7 +53,7 @@
 
     <button onclick="openCustomize()" class="font-sf border-2 border-[var(--text)] px-2 rounded-xl fixed bottom-3 right-3 bg-[var(--bg-color)]">Customize</button>
 
-    <button id="OpenSideBarBtn" class="z-20 flex justify-center items-center border-2 border-black  h-16 w-16 fixed top-[5vh] right-[5vh] bg-[var(--bg-color)] rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
+    <button id="OpenSideBarBtn" class="z-20 flex justify-center items-center border-2 border-black  h-16 w-16 fixed top-[5vh] right-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
         <img src="./Data/Images/ThreeBar.svg" alt="">
     </button>
 
@@ -58,7 +62,7 @@
         <img src="./Data/Images/Cross.svg" alt="">
     </button>
 
-    <div id="sideBar" class="z-10 h-screen w-[95vh] fixed bg-black atop-0 flex items-center justify-center flex-col rounded-[100%] duration-[1.5s] right-[-200vh] transition-all pl-16">
+    <div id="sideBar" class="z-10 h-screen w-[95vh] fixed bg-zinc-800 atop-0 flex items-center justify-center flex-col rounded-[100%] duration-[1.5s] right-[-200vh] transition-all pl-16">
         <h2 class="w-80 uppercase text-sm font-extrabold text-neutral-400 pb-4">Navigation</h2>
         <div class="flex justify-start flex-col w-72 gap">
             <a href="" class="navLink btn">Home</a>
@@ -98,6 +102,11 @@
         <div class="w-full text-right pr-10">
             <a href="" class="text-right underline font-bold hover:text-slate-400 duration-500">See More</a>
         </div>
+    </section>
+
+    <section class="">
+        <h1 class="font-bold text-3xl">Get Started</h1>
+        <p>Let's get in touch!</p>
     </section>
 
 

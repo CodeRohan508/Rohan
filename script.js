@@ -67,30 +67,67 @@ document.addEventListener("DOMContentLoaded", function () {
   const fontSelect = document.getElementById("fontSelect");
   const themeSelect = document.getElementById("themeSelect");
 
+  // Load preferences from cookies
+  const savedFont = getCookie("selectedFont");
+  const savedTheme = getCookie("selectedTheme");
+
+  if (savedFont) {
+      document.body.classList.add(`font-${savedFont}`);
+      fontSelect.value = savedFont; // Set the dropdown to the saved value
+  }
+
+  if (savedTheme) {
+      document.body.classList.add(`theme-${savedTheme}`);
+      themeSelect.value = savedTheme; // Set the dropdown to the saved value
+  }
+
   fontSelect.addEventListener("change", function () {
-    const selectedFont = this.value;
-    document.body.classList.remove(
-      "font-default",
-      "font-modern",
-      "font-simple",
-      "font-easy",
-      "font-newspaper"
-    );
-    document.body.classList.add(`font-${selectedFont}`);
+      const selectedFont = this.value;
+      document.body.classList.remove(
+          "font-default",
+          "font-modern",
+          "font-simple",
+          "font-easy",
+          "font-newspaper"
+      );
+      document.body.classList.add(`font-${selectedFont}`);
+      setCookie("selectedFont", selectedFont, 7); // Save preference in cookie
   });
 
   themeSelect.addEventListener("change", function () {
-    const selectedTheme = this.value;
-    document.body.classList.remove(
-      "theme-default",
-      "theme-light",
-      "theme-dark",
-      "theme-neon",
-      "theme-glitch"
-    );
-    document.body.classList.add(`theme-${selectedTheme}`);
+      const selectedTheme = this.value;
+      document.body.classList.remove(
+          "theme-default",
+          "theme-light",
+          "theme-dark",
+          "theme-neon",
+          "theme-glitch"
+      );
+      document.body.classList.add(`theme-${selectedTheme}`);
+      setCookie("selectedTheme", selectedTheme, 7); // Save preference in cookie
   });
 });
+
+function setCookie(name, value, days) {
+  let expires = "";
+  if (days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+  const nameEQ = name + "=";
+  const ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+  }
+  return null;
+}
 
 const contextMenu = document.getElementById('contextMenu');
 
