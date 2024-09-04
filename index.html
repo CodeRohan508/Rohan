@@ -12,21 +12,21 @@
     <title>Document</title>
 </head>
 
-<body class="scroll-smooth">
-    <div id="contextMenu" class="z-50 hidden absolute bg-neutral-800 shadow-md rounded-lg py-2 w-48">
-        <button href="#" class="contextItem">Back</button>
-        <button href="#" class="contextItem">Reload</button>
-        <button href="#" class="contextItem">Close Window</button>
-        <button href="#" class="contextItem">Close Current Tab</button>
-        <div class="border-t border-slate-400 my-2"></div>
-        <button href="" class="contextItem">Portfolio</button>
-        <button href="" class="contextItem">About Me</button>
-        <button href="" class="contextItem">Hire Me</button>
-        <button href="" class="contextItem">Blogs</button>
-        <button href="" class="contextItem">Top Projects</button>
-        <div class="border-t border-slate-400 my-2"></div>
-        <button href="" class="contextItem">Leave a Review</button>
-        <button href="" class="contextItem">Ask Something</button>
+<body class="scroll-smooth overflow-x-hidden">
+    <div id="contextMenu" class="z-50 hidden absolute transition-all duration-150 bg-neutral-800 shadow-md rounded-lg py-1 w-48">
+        <button onclick="window.history.back();" class="contextItem">Back</button>
+        <button onclick="window.history.forward()" class="contextItem">Forward</button>
+        <button onclick="window.location.reload()" class="contextItem">Reload</button>
+        <button onclick="window.close()" class="contextItem">Close Window</button>
+        <div class="border-t border-slate-400 my-3"></div>
+        <button onclick="" class="contextItem">Portfolio</button>
+        <button onclick="" class="contextItem">About Me</button>
+        <button onclick="" class="contextItem">Hire Me</button>
+        <button onclick="" class="contextItem">Blogs</button>
+        <button onclick="" class="contextItem">Top Projects</button>
+        <div class="border-t border-slate-400 my-3"></div>
+        <button onclick="" class="contextItem">Leave a Review</button>
+        <button onclick="" class="contextItem">Ask Something</button>
     </div>
 
     <div id="blocker" class="bg-black h-screen w-full z-[5] opacity-0 fixed top-0 pointer-events-none transition-all duration-1000"></div>
@@ -105,8 +105,8 @@
     </section>
 
     <section class="">
-        <h1 class="font-bold text-3xl">Get Started</h1>
-        <p>Let's get in touch!</p>
+        <h2 class="uppercase font-bold text-md pb-5">Get Started</h1>
+            
     </section>
 
 

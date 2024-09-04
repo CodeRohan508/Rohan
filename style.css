@@ -52,7 +52,7 @@ section {
 }
 
 .contextItem {
-  @apply block px-4 text-sm text-gray-100 bg-transparent font-sf w-[96%] text-left m-[2%] hover:bg-sky-800 rounded-md font-semibold
+  @apply block px-3 py-[0.5%] my-2 text-sm text-white bg-transparent font-sf w-[94%] text-left mx-[3%] hover:bg-blue-800 rounded-md font-bold transition-all duration-150
 }
 
 #toggleButton {
@@ -85,6 +85,15 @@ section {
   box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px); /* For Safari support */
+  border-radius: 10px;
+  overflow: hidden; /* Clip background to rounded border */
+}
+
+#contextMenu {
+  z-index: 4000;
+  background: rgba(255, 255, 255, 0.164);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* For Safari support */
   border-radius: 10px;
   overflow: hidden; /* Clip background to rounded border */
 }
