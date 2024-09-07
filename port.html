@@ -32,7 +32,7 @@
     <div id="blocker" class="bg-black h-screen w-full z-[5] opacity-0 fixed top-0 pointer-events-none transition-all duration-1000"></div>
 
     <div id="customize" class="fixed right-[-50%] bottom-16 h-[350px] w-52 p-5 rounded-xl duration-500 transition-all">
-        <h3 class="invert">Fonts</h3>
+        <h3>Fonts</h3>
         <select name="font" id="fontSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none text-black">
             <option value="default">Default</option>
             <option value="modern">Modern</option>
@@ -41,7 +41,7 @@
             <option value="newspaper">Newspaper</option>
         </select>
         
-        <h3 class="mt-5 invert">Theme</h3>
+        <h3 class="mt-5">Theme</h3>
         <select name="theme" id="themeSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none text-black">
             <option value="default">Default</option>
             <option value="light">Light</option>
@@ -72,14 +72,21 @@
         </div>
     </div>
 
-    <section id="hero" class="text-center items-center justify-start flex flex-col">
-        <h1 class="font-black text-4xl">Nurujjaman Rohan</h1>
-        <h2 class="bg-gradient-to-tr text-xl from-blue-400 to-blue-700 text-transparent bg-clip-text font-black">About Me</h2>
-        <div class="w-full h-fit bg-[var(--text)] absolute top-[35%] rounded-t-[300px] rounded-b-[100px] px-[28%] pt-28 pb-48 shadow-inner shadow-[var(--bg-color)]">
-            <h3 class="bg-gradient-to-tr text-[4vw] from-zinc-400 to-zinc-600 text-transparent bg-clip-text font-extrabold font-sf text-shadow-none">Hello, I'm Rohan!</h3>
-            <p class="text-[var(--bg-color)] font-sf mt-12 font-semibold text-[1.3vw] text-left tracking-wide">I am an enthusiastic web developer with a passion for building effective, user-friendly websites and apps. I live in Bangladesh. I've developed and designed responsive websites throughout the years, developing my skills with a concentration on providing seamless user experiences. Through my background in both front-end and back-end programming, I am able to create versatile, dynamic apps that are specifically designed to satisfy the needs of my clients. <br> <br>
-            I appreciate taking challenging issues and simplifying them down into understandable, straightforward solutions while paying close attention to the code's quality. My dedication to writing clear, maintainable code and my pursuit of lifelong learning to stay current with market developments inform my approach to development. I communicate extensively with clients to fully understand their goals and make sure their vision is fulfilled throughout the development process. I can effectively contribute to any project, no matter whether it involves creating a custom solution or enhancing an already-existing platform. I am always ready to take on new challenges.
-            </p>
+    <section id="portfolio" class="">
+        <h1 class="font-bold text-[3vw] uppercase">My Recent Works</h1>
+        <div class="flex flex-col items-center justify-center">
+            <div class="portItem">
+                <!-- <img src="https://e0.pxfuel.com/wallpapers/475/469/desktop-wallpaper-gallery-of-microsoft-windows-10-gray-background-best.jpg" alt=""> -->
+                <div class="portHead">
+                    <h2>My first visit</h2>
+                    <p>Yes, this is my first app!</p>
+                    <button class="my-16 px-7 py-2 bg-[var(--text)] text-[var(--bg-color)] rounded-2xl font-sf text-xl font-semibold cursor-pointer hover:scale-110 duration-300">More Details</button>
+                </div>
+            </div>
+            <div class="portItem"></div>
+            <div class="portItem"></div>
+            <div class="portItem"></div>
+            <div class="portItem"></div>
         </div>
     </section>
 

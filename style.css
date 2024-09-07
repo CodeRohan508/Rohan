@@ -55,6 +55,26 @@ section {
   @apply block px-3 py-[0.5%] my-2 text-sm text-white bg-transparent font-sf w-[94%] text-left mx-[3%] hover:bg-blue-800 rounded-md font-bold transition-all duration-150
 }
 
+.portItem {
+  @apply w-[70%] h-[70vh] border-2 border-[var(--text)] shadow-inner shadow-[var(--text)] rounded-3xl my-11 hover:scale-105 transition-all duration-150
+}
+
+.portItem img {
+  @apply w-full h-full rounded-3xl
+}
+
+.portHead {
+  @apply mt-[12vw] ml-[5vw]
+}
+
+.portHead h2 {
+  @apply text-[5vw] bg-gradient-to-tr from-zinc-400 to-zinc-900 text-transparent bg-clip-text font-bold font-sf
+}
+
+.portHead p {
+  @apply text-[1.3vw] font-sf -mt-4
+}
+
 #toggleButton {
   background: none;
   border: none;
@@ -68,7 +88,7 @@ section {
 
 #icon line {
   transition: transform 0.3s ease; /* Smooth transition for transform property */
-  transform-origin: 50% 50%; /* Center of the SVG element */
+  transform-origin: 50% 50%; /* Center of tblockhe SVG element */
 }
 
 #toggleButton.active #line1 {
