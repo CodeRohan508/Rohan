@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "SF Pro Display";
+  color: var(--text);
+  transition: all 0.7s;
+}
+
+:root {
+  --bg: white;
+  --bg2: #cdcdcd;
+  --text: black;
+  --text2: #6a6a6a;
+  transition: 0.5s ease-in-out;
+}
+
+.darkMode {
+  --text: white;
+  --text2: #d2d2d2;
+  --bg: black;
+  --bg2: #383838;
+}
+
+body {
+  /* background-image: url("https://imgs.search.brave.com/JOBBbYoCAA6Zg-OliDLbELJai4iCCjHNThLRXTFeJDQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvZGFy/ay10aGVtZS1iYWNr/Z3JvdW5kLXVxNnBr/dG1pa3l3Y2l4djMu/anBn"); */
+  scroll-behavior: smooth;
+  /* background-color: var(--bg); */
+  transition: 0.5s ease-in-out;
+}
+
+*::-webkit-scrollbar {
+  height: 20px;
+  width: 100px;
+}
+
+main {
+  /* scrollbar-width: thin; */
+  scrollbar-color: var(--text2) transparent;
+}
+
+.navLink {
+  @apply text-[1.2vw] font-black uppercase tracking-wider hover:translate-x-4 transition-transform duration-300 cursor-pointer;
+}
+
+.content-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 5vw;
+}
+
+.content-section.active {
+  opacity: 1;
+}
+
+.hidden {
+  pointer-events: none; /* Prevent interaction with hidden sections */
+}
+
+.projectItem {
+  @apply w-full sm:w-1/2 lg:w-1/4 p-4;
+}
+
+.projectContent {
+  @apply bg-[var(--bg)] border border-[--text2] p-4 shadow rounded-xl text-left hover:scale-105 duration-300 cursor-pointer;
+}
+
+.projectContent img {
+  @apply rounded-xl;
+}
+
+.projectContent h2 {
+  @apply text-2xl mt-5 font-black
+}
+
+.reviewItem {
+  @apply bg-white shadow-lg rounded-lg p-6
+}
+
+.reviewHead {
+  @apply flex items-center justify-between
+}

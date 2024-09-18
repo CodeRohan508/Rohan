@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body class="flex justify-between flex-row bg-[var(--bg)]">
+  <button id="darkMode" class="xl:w-[4vw] xl:h-[4vw] md:w-[8vw] md:h-[8vw] w-[12vw] h-[12vw] bg-white border-black border absolute bottom-5 left-5 z-10 rounded-full">
+    <img src="./Images/crescent-moon-png-35134.png" alt="">
+  </button>
+
+  <div class="w-[18vw] min-h-screen flex-col fixed p-[5vh] flex">
+    <h1 class="text-[1.5vw] text-left font-bold">Nurujjaman Rohan</h1>
+    <h2 class="text-[0.8vw] font-black uppercase mt-[5vw] text-[var(--text2)]">Navigation</h2>
+    <div class="flex flex-col items-start mt-2">
+      <p href="" class="navLink" id="homeNav">Home</p>
+      <p href="" class="navLink" id="aboutNav">About</p>
+      <p href="" class="navLink" id="reviewsNav">Reviews</p>
+      <p href="" class="navLink" id="projectsNav">Projects</p>
+    </div>
+  </div>
+
+  <main class="xl:ml-[18vw] m-[5%] transition-all xl:w-[82vw] w-[90%] h-[90vh] mr-[5vh] my-[5vh] bg-[var(--bg2)] rounded-[3vw] p-20 border-[var(--text)] border-2 backdrop-blur-md overflow-y-auto">
+    <div id="home" class="flex items-center justify-center h-full flex-col content-section">
+      <h2 class="text-5xl font-black">Hello, I'm Rohan</h2>
+      <p class="text-xl mt-3 font-semibold text-[var(--text2)]">Use the Navigation Bar in the left side to learn more
+        about me!</p>
+    </div>
+    <div id="contents" class="content-section hidden">
+      <h2 class="font-black text-4xl">Hey There, I'm Rohan!</h2>
+      <h4 class="font-bold text-xl text-[var(--text2)]">I am an Web Developer and also a Programmer</h4>
+    </div>
+    <div id="projects" class="content-section hidden">
+      <h2 class="font-black text-4xl">Have a Look on my Recent Projects</h2>
+      <h4 class="font-bold text-xl text-[var(--text2)]">Let's see what I did recently</h4>
+      <h2 class="mt-14 text-2xl font-black">My Project List</h2>
+      <div class="container mx-auto py-5">
+        <div class="flex flex-wrap -m-2">
+          <div class="projectItem">
+            <div class="projectContent">
+              <img class="" src="https://imgs.search.brave.com/76O9X0MwvwabnIAxeWFjC0ayEQRFpkpGaSnVOCKajeU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI2MzQx/NjAuanBn" alt="">
+              <h2>Portfolio Site</h2>
+              <p>I finally completed building my portfolio site! Let's see!</p>
+            </div>
+          </div>
+          <div class="projectItem">
+            <div class="projectContent">
+              <img class="" src="https://imgs.search.brave.com/76O9X0MwvwabnIAxeWFjC0ayEQRFpkpGaSnVOCKajeU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI2MzQx/NjAuanBn" alt="">
+              <h2>Portfolio Site</h2>
+              <p>I finally completed building my portfolio site! Let's see!</p>
+            </div>
+          </div>
+          <div class="projectItem">
+            <div class="projectContent">
+              <img class="" src="https://imgs.search.brave.com/76O9X0MwvwabnIAxeWFjC0ayEQRFpkpGaSnVOCKajeU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI2MzQx/NjAuanBn" alt="">
+              <h2>Portfolio Site</h2>
+              <p>I finally completed building my portfolio site! Let's see!</p>
+            </div>
+          </div>
+          <div class="projectItem">
+            <div class="projectContent">
+              <img class="" src="https://imgs.search.brave.com/76O9X0MwvwabnIAxeWFjC0ayEQRFpkpGaSnVOCKajeU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI2MzQx/NjAuanBn" alt="">
+              <h2>Portfolio Site</h2>
+              <p>I finally completed building my portfolio site! Let's see!</p>
+            </div>
+          </div>
+          <div class="projectItem">
+            <div class="projectContent">
+              <img class="" src="https://imgs.search.brave.com/76O9X0MwvwabnIAxeWFjC0ayEQRFpkpGaSnVOCKajeU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI2MzQx/NjAuanBn" alt="">
+              <h2>Portfolio Site</h2>
+              <p>I finally completed building my portfolio site! Let's see!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="reviews" class="content-section hidden">
+      <h2 class="font-black text-4xl">What My Clients Said About Me?</h2>
+      <h4 class="font-bold text-xl text-[var(--text2)]">Let's see what I did recently</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-9">
+        <!-- Review 1 -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold text-gray-800">John Doe</h3>
+            <div class="flex items-center">
+              <span class="text-yellow-400 text-xl">★★★★☆</span>
+              <span class="ml-2 text-gray-600 text-sm">4.0</span>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-600">"Great product, loved the features and the user-friendly interface. Will recommend to others!"</p>
+        </div>
+    
+        <!-- Review 2 -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold text-gray-800">Jane Smith</h3>
+            <div class="flex items-center">
+              <span class="text-yellow-400 text-xl">★★★★★</span>
+              <span class="ml-2 text-gray-600 text-sm">5.0</span>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-600">"Excellent service and high-quality products! Highly recommend!"</p>
+        </div>
+    
+        <!-- Review 3 -->
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xl font-bold text-gray-800">Alice Johnson</h3>
+            <div class="flex items-center">
+              <span class="text-yellow-400 text-xl">★★★☆☆</span>
+              <span class="ml-2 text-gray-600 text-sm">3.0</span>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-600">"Good, but there is room for improvement in terms of speed and responsiveness."</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
