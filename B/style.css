@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+}
+
+html {
+  scrollbar-color: #ffffffc7 transparent;
+}
+
+.blur {
+  /* background-image: url("./Images/Untitled.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: repImg 5s infinite;
+}
+
+@keyframes repImg {
+  0% {
+    background-image: url("./Images/Untitled.png");
+  }
+  50% {
+    background-image: url("./Images/12.png");
+  }
+  100% {
+    background-image: url("./Images/Untitled.png");
+  }
+}
+
+.navLink {
+  @apply w-[25%] text-white flex items-center justify-center text-xl relative h-full;
+
+  &::after {
+    content: "";
+    @apply bottom-0 left-0 bg-white w-full h-[.2vw] absolute rounded-full opacity-0 transition-opacity duration-500;
+  }
+
+  &:hover::after {
+    @apply opacity-100;
+  }
+}
+
+section {
+  min-height: 100vh;
+  padding: 10%;
+  width: 100%;
+}
+
+.skillDiv {
+  @apply w-full md:w-[48%] xl:w-1/4 h-72 bg-[#3e3e3e8c] rounded-3xl backdrop-blur-sm relative flex items-center justify-center text-center p-4 flex-col transition-all duration-500;
+  animation: fadeA linear;
+  animation-range: entry 0;
+  animation-timeline: view();
+}
+
+.revDiv {
+  @apply relative w-full md:w-[48%] xl:w-[28%] h-72 bg-[#3e3e3e8c] backdrop-blur-sm rounded-3xl flex items-center justify-center flex-col gap-6;
+  animation: fadeA linear;
+  animation-range: entry;
+  animation-timeline: view();
+}
+
+.toButton {
+  animation: float 3s linear infinite;
+  @apply hover:scale-105 transition-all duration-500;
+}
+
+.aboutSkill {
+  @apply w-full xl:w-1/2 min-h-full bg-[#3e3e3e8c] rounded-3xl backdrop-blur-sm relative flex items-center justify-start text-center p-10 flex-col transition-all duration-500;
+  animation: fadeA linear;
+  animation-range: entry 0;
+  animation-timeline: view();
+}
+
+.skillLoad{
+  @apply w-full h-3 bg-white rounded-xl relative;
+}
+
+.loading {
+  @apply absolute top-0 left-0 h-full bg-blue-400 rounded-xl
+}
+
+@keyframes float {
+  0% {
+    translate: 0 -15px;
+  }
+  50% {
+    translate: 0 15px;
+  }
+  100% {
+    translate: 0 -15px;
+  }
+}
+
+@keyframes fadeA {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  via {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+#context-menu {
+  display: none;
+}
+
+.contextItem {
+  @apply w-[96%] px-5 py-2 cursor-pointer  hover:bg-[#ffffffcb] rounded-md m-[2%] flex items-end gap-3;
+}
+
+.contextItem img {
+  width: 20px;
+  height: 20px;
+}

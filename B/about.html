@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="bg-[#000000] text-white">
+    <div class="w-screen h-screen -z-10 blur fixed"></div>
+    <div class="blurer w-screen h-screen -z-[5] fixed backdrop-blur-[100px]"></div>
+
+    <header id="header" class="z-50 fixed flex items-center justify-between w-full h-[10vh] px-[5%] bg-gradient-to-b from-black to-transparent">
+        <h1 class="text-white font-bold text-2xl cursor-pointer hover:scale-105 duration-300">Md. Nurujjaman Rohan</h1>
+        <div class="w-[35%] h-[60%] bg-[#323232] rounded-2xl xl:flex hidden items-center justify-between cursor-pointer duration-500 px-[2%] gap-[4%]">
+            <a href="" class="navLink">Home</a>
+            <a href="/about.html" class="navLink">About</a>
+            <a href="" class="navLink">Projects</a>
+            <a href="" class="navLink">Blogs</a>
+        </div>
+        <button class="w-[13%] h-[60%] xl:flex hidden bg-black items-center justify-center cursor-pointer transition-all duration-500 hover:scale-105 bg-gradient-to-tr from-[#DA22FF] via-[#9733EE] to-[#DA22FF] rounded-3xl text-white font-bold text-2xl">Contact Me</button>
+        <div class="w-16 flex xl:hidden h-16 bg-white rounded-full"></div>
+    </header>
+
+    <section id="hero" class="flex items-center justify-around">
+        <div>
+            <h1 class="font-bold text-5xl">Hello There!</h1>
+            <h2 class="font-semibold text-[50px]">This is, 
+                <span class="bg-gradient-to-tr from-[#DA22FF] via-[#9721ff] to-[#4e015d] bg-clip-text text-transparent">Md. Nurujjaman Rohan</span>
+            </h2>
+            <h3 class="font-bold text-[30px]">Let's
+                <span class="bg-gradient-to-br from-[#DA22FF] via-[#9721ff] to-[#DA22FF] bg-clip-text text-transparent">Learn</span> About
+                <span class="bg-gradient-to-tr from-[#DA22FF] via-[#9721ff] to-[#4e015d] bg-clip-text text-transparent">Me</span>
+            </h3>
+            <button class="toButton bg-gradient-to-tr from-[#DA22FF] via-[#9733EE] to-[#DA22FF] py-3 px-10 text-2xl mt-16 rounded-2xl tracking-wider font-bold shadow-purple-500">Get Started</button>
+        </div>
+        <div>
+            <div class="relative bg-slate-700 bottom-40 text-center">Nothing Here<br>Didn't ask</div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="text-center font-bold text-5xl">What <span class="bg-gradient-to-br from-[#DA22FF] via-[#9721ff] to-[#DA22FF] bg-clip-text text-transparent">can</span> I do?</h2>
+        <div class="w-full mt-20 flex justify-between items-start gap-4">
+            <div class="aboutSkill">
+                <h2 class="font-bold text-3xl pb-3">My Skills</h2>
+                <div class="w-full items-center justify-between flex-col">
+                    <div class="w-full justify-center items-start flex flex-col gap-1 py-3">
+                        <p class="font-semibold text-xl">HTML & CSS</p>
+                        <div class="skillLoad">
+                            <div class="loading w-[90%]"></div>
+                        </div>
+                    </div>
+                    <div class="w-full justify-center items-start flex flex-col gap-1 py-3">
+                        <p class="font-semibold text-xl">JavaScript</p>
+                        <div class="skillLoad">
+                            <div class="loading w-[65%]"></div>
+                        </div>
+                    </div>
+                    <div class="w-full justify-center items-start flex flex-col gap-1 py-3">
+                        <p class="font-semibold text-xl">Python</p>
+                        <div class="skillLoad">
+                            <div class="loading w-[60%]"></div>
+                        </div>
+                    </div>
+                    <div class="w-full justify-center items-start flex flex-col gap-1 py-3">
+                        <p class="font-semibold text-xl">PHP & MySQL</p>
+                        <div class="skillLoad">
+                            <div class="loading w-[58%]"></div>
+                        </div>
+                    </div>
+                    <div class="w-full justify-center items-start flex flex-col gap-1 py-3">
+                        <p class="font-semibold text-xl">Photoshop & Illustrator</p>
+                        <div class="skillLoad">
+                            <div class="loading w-[65%]"></div>
+                        </div>
+                    </div>
+                    <div class="w-full justify-center items-start flex flex-col gap-1 py-3">
+                        <p class="font-semibold text-xl">C, C++ & C#</p>
+                        <div class="skillLoad">
+                            <div class="loading w-[20%]"></div>
+                        </div>
+                    </div>
+                    <div class="w-full justify-center items-start flex flex-col gap-1 py-3">
+                        <p class="font-semibold text-xl">AI and Data Science</p>
+                        <div class="skillLoad">
+                            <div class="loading w-[30%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutSkill text-left">
+                <h2 class="font-bold text-left text-3xl w-full">Recent Experiences</h2>
+                <p class="text-left text-xl w-full">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, nobis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, deleniti.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="context-menu" class="hidden fixed z-[1000] bg-[#ffffffc4] border border-gray-200 rounded-lg shadow-lg w-64 backdrop-blur">
+        <ul class="text-black">
+            <li class="contextItem" onclick="window.history.back()">Back</li>
+            <li class="contextItem" onclick="window.history.forward()">Forward</li>
+            <li class="contextItem" onclick="window.location.reload()">Reload</li>
+            <li class="contextItem" onclick="if (confirm('This tab will be closed. Confirm?')) { close() }">Close This Tab</li>
+            <div class="w-full bg-[#606060] h-[1px] my-2"></div>
+            <li class="contextItem" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Go Up</li>
+            <li class="contextItem" onclick="window.scrollBy({ top: 999999999999, behavior: 'smooth' });">Go Down</li>
+            <div class="w-full bg-[#606060] h-[1px] my-2"></div>
+            <li class="contextItem" onclick="navigator.clipboard.writeText(window.location.href)">Copy Page Link</li>
+            <!-- <li class="contextItem" onclick="document.classList.toggle('darKMode')">Toggle Dark Mode</li> -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
