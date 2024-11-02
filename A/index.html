@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="//fdn.fontcdn.ir"><link rel="preconnect" href="//v1.fontapi.ir"><link href="https://v1.fontapi.ir/css/SFProDisplay" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Nurujjaman Rohan ⋄ Web Developer & Programmer</title>
+</head>
+
+<body class="scroll-smooth overflow-x-hidden">
+    <div id="contextMenu" class="z-50 hidden absolute transition-all duration-150 bg-neutral-800 shadow-md rounded-lg py-1 w-48">
+        <button onclick="window.history.back();" class="contextItem">Back</button>
+        <button onclick="window.history.forward()" class="contextItem">Forward</button>
+        <button onclick="window.location.reload()" class="contextItem">Reload</button>
+        <button onclick="window.close()" class="contextItem">Close Current Tab</button>
+        <div class="border-t border-slate-400 my-3"></div>
+        <button onclick="" class="contextItem">Portfolio</button>
+        <button onclick="window.location.href = '/index2.html'" class="contextItem">About Me</button>
+        <button onclick="" class="contextItem">Hire Me</button>
+        <button onclick="" class="contextItem">Blogs</button>
+        <button onclick="" class="contextItem">Top Projects</button>
+        <div class="border-t border-slate-400 my-3"></div>
+        <button onclick="" class="contextItem">Leave a Review</button>
+        <button onclick="" class="contextItem">Ask Something</button>
+    </div>
+
+    <div id="blocker" class="bg-black h-screen w-full z-[5] opacity-0 fixed top-0 pointer-events-none transition-all duration-1000"></div>
+
+    <div id="customize" class="fixed right-[-50%] bottom-16 h-[350px] w-52 p-5 rounded-xl duration-500 transition-all">
+        <h3>Fonts</h3>
+        <select name="font" id="fontSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none text-black">
+            <option value="default">Default</option>
+            <option value="modern">Modern</option>
+            <option value="simple">Simple</option>
+            <option value="easy">Easy</option>
+            <option value="newspaper">Newspaper</option>
+        </select>
+        
+        <h3 class="mt-5">Theme</h3>
+        <select name="theme" id="themeSelect" class="shadow shadow-black w-full rounded-lg border-none outline-none text-black">
+            <option value="default">Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <!-- <option value="neon">Neon</option>
+            <option value="glitch">Glitch</option> -->
+        </select>      
+    </div>
+
+    <button onclick="openCustomize()" class="font-sf border-2 border-[var(--text)] px-2 rounded-xl fixed bottom-3 right-3 bg-[var(--bg-color)]">Customize</button>
+
+    <button id="OpenSideBarBtn" class="z-20 flex justify-center items-center border-2 border-black  h-16 w-16 fixed top-[5vh] right-[5vh] bg-white rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black">
+        <img src="./Data/Images/ThreeBar.svg" alt="">
+    </button>
+
+    <button id="CloseSideBarBtn"
+        class="z-20 flex justify-center items-center h-16 w-16 fixed top-[5vh] bg-white border-2 border-black  bg-[var(--bg-color)] rounded-full cursor-pointer hover:scale-125 hover:rotate-180 duration-700 text-black right-[500vh]">
+        <img src="./Data/Images/Cross.svg" alt="">
+    </button>
+
+    <div id="sideBar" class="z-10 h-screen w-[95vh] fixed bg-zinc-800 top-0 flex items-center justify-center flex-col rounded-[100%] duration-[1.5s] right-[-200vh] transition-all pl-16">
+        <h2 class="w-80 uppercase text-sm font-extrabold text-neutral-400 pb-4">Navigation</h2>
+        <div class="flex justify-start flex-col w-72 gap">
+            <a href="" class="navLink btn">Home</a>
+            <a href="" class="navLink btn">Portfolio</a>
+            <a href="" class="navLink btn">About Me</a>
+            <a href="" class="navLink btn">Contact</a>
+        </div>
+    </div>
+
+    <section id="hero" class="text-center items-center justify-center flex flex-col">
+        <h1 class="font-black text-4xl">Nurujjaman Rohan</h1>
+        <h2>
+            <span class="bg-gradient-to-tr from-blue-400 to-blue-800 text-transparent bg-clip-text font-black">Web
+                Developer</span> and
+            <span
+                class="bg-gradient-to-tr from-green-300 to-green-600 text-transparent bg-clip-text font-black">Programmer</span>
+        </h2>
+        <h3 class="absolute bottom-4 font-sf font-bold uppercase text-sm text-zinc-300">Recent Experience - <span class="text-white">Usda.io</span></h3>
+    </section>
+
+    <section id="works" class="w-full">
+        <h2 class="uppercase font-bold text-md pb-5">Recent Projects</h2>
+        <div class="flex items-center justify-center flex-col w-full">
+            <div class="listItem">
+                <h2 class="font-semibold text-xl">Hello</h2>
+                <h3>2023</h3>
+            </div>
+            <div class="listItem">
+                <h2 class="font-semibold text-xl">Hello</h2>
+                <h3>2023</h3>
+            </div>
+            <div class="listItem">
+                <h2 class="font-semibold text-xl">Hello</h2>
+                <h3>2023</h3>
+            </div>
+        </div>
+        <div class="w-full text-right pr-10">
+            <a href="" class="text-right underline font-bold hover:text-slate-400 duration-500">See More</a>
+        </div>
+    </section>
+
+    <section class="">
+        <h2 class="uppercase font-bold text-md pb-5">Get Started</h1>
+        <div class="form">
+            <div class="flex justify-center items-center mt-5 w-[50%] gap-5">
+                <div class="w-10 h-10 bg-zinc-700 rounded-full text-white flex justify-center items-center">1</div>
+                <input type="text" class="placeholder:text-[var(--text)] w-full border-none outline-none bg-transparent" placeholder="Enter Your Name (e.g. John Doe)">
+            </div>
+            <div class="flex justify-center items-center mt-5 w-[50%] gap-5">
+                <div class="w-10 h-10 bg-zinc-700 rounded-full text-white flex justify-center items-center">2</div>
+                <input type="text" class="placeholder:text-[var(--text)] w-full border-none outline-none bg-transparent" placeholder="Enter Your E-mail (e.g. example@domain.id)">
+            </div>
+            <div class="flex justify-center mt-5 w-[50%] gap-5">
+                <div class="w-10 h-10 bg-zinc-700 rounded-full text-white flex justify-center items-center">3</div>
+                <textarea type="text" class="placeholder:text-[var(--text)] py-2 w-full border-none outline-none bg-transparent resize-none" placeholder="Enter Your Message" rows="7"></textarea>
+            </div>
+        </div>
+        <button class="my-16 px-7 py-2 bg-[var(--text)] text-[var(--bg-color)] rounded-2xl">Submit</button>
+    </section>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
