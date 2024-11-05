@@ -71,7 +71,7 @@ section {
 }
 
 .aboutSkill {
-  @apply w-full xl:w-1/2 min-h-full bg-[#3e3e3e8c] rounded-3xl backdrop-blur-sm relative flex items-center justify-start text-center p-10 flex-col transition-all duration-500;
+  @apply min-h-full bg-[#3e3e3e8c] rounded-3xl backdrop-blur-sm relative flex items-center justify-start text-center p-10 flex-col transition-all duration-500;
   animation: fadeA linear;
   animation-range: entry 0;
   animation-timeline: view();
